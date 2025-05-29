@@ -1,3 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>گروه فرهنگی هنری تمنای ظهور - سفیدشهر</title>
+  <style>
+    @font-face {
+      font-family: 'COLAK';
+      src: local('Arial'), sans-serif;
+      font-weight: 700;
+    }
+    body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background: linear-gradient(to bottom, #034d23, #f8e49f);
+      color: #2a3a21;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: linear-gradient(90deg, #1f6e3f, #f8e49f);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    header .logo img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid #d4b458;
+      object-fit: cover;
+    }
+    header .logo h1 {
+      font-family: 'COLAK', serif;
+      font-weight: 700;
+      color: #196c2d;
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: 0.08em;
+    }
+    nav a {
+      color: #196c2d;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 12px;
+      transition: color 0.3s;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      color: #d4b458;
+    }
+
+    /* اسلایدشو */
+    .slideshow {
+      position: relative;
+      max-width: 100%;
+      height: 60vh;
+      overflow: hidden;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+    .slides {
+      display: flex;
+      width: 400%;
+      height: 100%;
+      animation: slideAnim 20s infinite;
+    }
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+      height: 100%;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.7);
+    }
+    .slide-content {
+      position: absolute;
+      bottom: 20%;
+      right: 8%;
+      color: #f8e49f;
+      font-family: 'COLAK', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-shadow: 0 0 6px rgba(0,0,0,0.6);
+      max-width: 400px;
+    }
+
+    @keyframes slideAnim {
+      0% {transform: translateX(0);}
+      25% {transform: translateX(-100%);}
+      50% {transform: translateX(-200%);}
+      75% {transform: translateX(-300%);}
+      100% {transform: translateX(0);}
+    }
+
+    /* بخش معرفی */
+    .intro {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .intro h2 {
+      font-family: 'COLAK', serif;
+      color: #196c2d;
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 1.2rem;
+      color: #2e3b23;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* بخش آثار */
+    .works {
+      background: #f0f2d7;
+      padding: 40px 20px;
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+    .works h3 {
+      font-family: 'COLAK', serif;
+      font-size: 2rem;
+      color: #196c2d;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .work-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 20px;
+    }
+    .work-item {
+      background: #d4d9a3;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .work-item:hover {
+      transform: scale(1.05);
+    }
+    .work-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 3px solid #196c2d;
+    }
+    .work-item h4 {
+      margin: 10px;
+      font-family: 'COLAK', serif;
+      font-size: 1.3rem;
+      color: #196c2d;
+    }
 /* بخش تماس با ما */
     footer {
       background: linear-gradient(90deg, #1f6e3f, #f8e49f);
